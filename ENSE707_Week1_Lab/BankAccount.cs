@@ -10,6 +10,12 @@ public class  BankAccount
     // Constructor to initialize the bank account with an account holder's name and an opening balance.
     public BankAccount(string accountHolder, decimal openingBalance)
     {
+        if (string.IsNullOrWhiteSpace(accountHolder))
+            throw new ArgumentException("Account holder name is required.");
+
+        if(openingBalance < 0)
+            throw new ArgumentException("Opening balance cannot be negative.");
+
         AccountHolder = accountHolder;
         Balance = openingBalance;
     }
