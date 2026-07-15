@@ -1,4 +1,4 @@
-﻿namespace ENSE_Week1_Lab;
+﻿namespace ENSE707_Week1_Lab;
 
 public class  BankAccount
 {

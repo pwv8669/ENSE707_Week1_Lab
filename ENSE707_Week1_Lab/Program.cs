@@ -1,9 +1,9 @@
-﻿using ENSE_Week1_Lab;
+﻿using ENSE707_Week1_Lab;
 
 BankAccount account = new BankAccount("Student User", 100);
 
 account.Deposit(50);
-account.Withdraw(30);
+account.Withdraw(300);
 
 Console.WriteLine($"Account holder: {account.AccountHolder}");
 Console.WriteLine($"Current balance: {account.Balance}");
