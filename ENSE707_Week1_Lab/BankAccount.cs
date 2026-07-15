@@ -32,6 +32,9 @@ public class  BankAccount
     // Method to withdraw money from the account. Returns true if successful, false if insufficient funds.
     public bool Withdraw(decimal amount)
     {
+        if (amount <= 0)
+            throw new ArgumentException("Withdrawal amount must be positive.");
+
         if (amount > Balance)
         {
             return false;
