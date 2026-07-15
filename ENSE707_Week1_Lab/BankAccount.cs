@@ -46,6 +46,9 @@ public class  BankAccount
     // Method to calculate a 2% transaction fee based on the amount.
     public decimal CalculateTransactionFee(decimal amount)
     {
+        if (amount <= 0)
+            throw new ArgumentException("Transaction amount must be positive.");
+
         return amount * 0.02m;
     }
 }
