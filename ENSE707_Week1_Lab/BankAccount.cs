@@ -23,6 +23,9 @@ public class  BankAccount
     // Method to deposit money into the account.
     public void Deposit(decimal amount)
     {
+        if (amount <= 0)
+            throw new ArgumentException("Deposit amount must be positive.");
+
         Balance = Balance + amount;
     }
 
